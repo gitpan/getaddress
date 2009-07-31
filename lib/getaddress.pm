@@ -1,6 +1,6 @@
 package getaddress;
 
-use 5.006005;
+use 5.006001;
 use strict;
 use warnings;
 use Carp;
@@ -27,7 +27,7 @@ our @EXPORT = qw(
 	ipwhere
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
@@ -62,54 +62,65 @@ sub ipwhere
 	my $ipfile = shift;
 	$ipfile = "data/QQWry.Dat" unless ($ipfile);
 	my $ipaddr = getipwhere ($ipfile, $ip);
-	return '鏈煡鍦板尯' unless ($ipaddr);
+	return '未知地区' unless ($ipaddr);
 	$ipaddr =~ s/CZ88\.NET//ig;
 	$ipaddr =~ s/^\s*//;
 	$ipaddr =~ s/\s*$//;
-	$ipaddr = '鏈煡鍦板尯' if (!$ipaddr || $ipaddr =~ /鏈煡|http/i);
+	$ipaddr = '未知地区' if (!$ipaddr || $ipaddr =~ /未知|http/i);
 	return $ipaddr;
 }
 
-1;
+# Autoload methods go after =cut, and are processed by the autosplit program.
 
+1;
 __END__
+# Below is stub documentation for your module. You'd better edit it!
 
 =head1 NAME
 
-getaddress - Get Address From IP
+getaddress - Perl extension for blah blah blah
 
 =head1 SYNOPSIS
 
-You can do this:
-
-=over 
-
   use getaddress;
-  print &ipwhere ('192.168.1.1', $path . '/QQWry.Dat');
-
-=back
+  blah blah blah
 
 =head1 DESCRIPTION
 
-You can use C<getaddress> to get address for your applications, it is very faster than common, you can find common.pl and getaddress.pl to compare in directory F<./bin/>.
+Stub documentation for getaddress, created by h2xs. It looks like the
+author of the extension was negligent enough to leave the stub
+unedited.
+
+Blah blah blah.
+
+=head2 EXPORT
+
+None by default.
+
+
 
 =head1 SEE ALSO
 
-You can find:
+Mention other useful documentation such as the documentation of
+related modules or operating system documentation (such as man pages
+in UNIX), or any relevant external documentation such as RFCs or
+standards.
 
-    http://my.huhoo.net/archives/2008/02/perl_ip.html
-    http://my.huhoo.net/archives/2008/02/php_ip.html
+If you have a mailing list set up for your module, mention it here.
+
+If you have a web site set up for your module, mention it here.
 
 =head1 AUTHOR
 
-Cnangel Li, E<lt>lijunlia@alibaba-inc.comE<gt>
+Junliang Li, E<lt>lijunlia@localdomainE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2008-2009 by Cnangel Li(cnangel)
+Copyright (C) 2008 by Junliang Li
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.5 or,
 at your option, any later version of Perl 5 you may have available.
+
 
 =cut

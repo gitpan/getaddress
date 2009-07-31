@@ -7,9 +7,6 @@
 \.old$
 pm_to_blib
 \.bak$
-\.gz$
-\.tar$
-\.bz2$
 \.git*
 po/foo\.po$
 po/meta\.po$

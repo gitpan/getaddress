@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name:                getaddress
-version:             0.01
-abstract:            Get Address From IP
+version:             0.02
+abstract:            Perl extension for blah blah blah
 license:             ~
 author:              
     - Cnangel <cnangel@126.com>
