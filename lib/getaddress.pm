@@ -27,7 +27,7 @@ our @EXPORT = qw(
 	ipwhere
 );
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
@@ -78,26 +78,20 @@ __END__
 
 =head1 NAME
 
-getaddress - Perl extension for blah blah blah
+getaddress - Perl extension for get address
 
 =head1 SYNOPSIS
 
   use getaddress;
-  blah blah blah
+  my $ipwhere = &ipwhere('127.0.0.1');
 
 =head1 DESCRIPTION
 
-Stub documentation for getaddress, created by h2xs. It looks like the
-author of the extension was negligent enough to leave the stub
-unedited.
-
-Blah blah blah.
+The programe can known ip where is.
 
 =head2 EXPORT
 
 None by default.
-
-
 
 =head1 SEE ALSO
 
